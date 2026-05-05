@@ -64,15 +64,15 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          {/* <motion.button
+          <motion.button
             whileHover={{ scale: 1.05, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+              window.open("https://github.com/22-vaibhav?tab=repositories", "_blank")
             }}
           >
             View Projects
-          </motion.button> */}
+          </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.05, rotate: -1 }}
