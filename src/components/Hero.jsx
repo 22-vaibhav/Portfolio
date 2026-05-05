@@ -1,4 +1,5 @@
-import profile from "../assets/profile-sketch.png";
+// import profile from "../assets/profile-sketch.png";
+import profile from "../assets/cartoon-profile-sketch.jpeg";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -43,7 +44,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Backend & AI Engineer
+          Backend | AI/ML Engineer
         </motion.h3>
 
         {/* DESCRIPTION */}
