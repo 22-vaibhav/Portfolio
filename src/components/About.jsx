@@ -62,10 +62,25 @@ export default function About() {
           <p>Tejas Networks, Bengaluru</p>
 
           <ul>
-            <li>Reduced manual testing effort by 25%</li>
-            <li>Improved system reliability by 15%</li>
-            <li>Resolved 20+ production issues</li>
-            <li>Automated CI/CD workflows</li>
+            <li>
+              Built Python-based automation frameworks for validating large-scale
+              network datasets, reducing manual testing effort by 25%.
+            </li>
+
+            <li>
+              Developed API monitoring and load-testing tools, improving system
+              reliability by 15%.
+            </li>
+
+            <li>
+              Diagnosed and resolved 20+ production issues across distributed
+              backend services.
+            </li>
+
+            <li>
+              Automated CI/CD validation workflows, reducing release cycle time
+              and regression defects.
+            </li>
           </ul>
         </motion.div>
 
