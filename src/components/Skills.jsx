@@ -7,6 +7,7 @@ import mongoIcon from "../assets/icons/mongo.png";
 import expressIcon from "../assets/icons/express.png";
 import pythonIcon from "../assets/icons/python.png"
 import javascriptIcon from "../assets/icons/javascript.png"
+import typescriptIcon from "../assets/icons/typescript.png"
 import mysqlIcon from "../assets/icons/mysql.png"
 import flaskIcon from "../assets/icons/flask.png"
 import langchainIcon from "../assets/icons/langchain.svg"
@@ -26,6 +27,7 @@ const skills = [
   { name: "HTML", icon: htmlIcon },
   { name: "CSS", icon: cssIcon },
   { name: "JavaScript", icon: javascriptIcon },
+  { name: "TypeScript", icon: typescriptIcon },
   { name: "React", icon: reactIcon },
   { name: "Node.js", icon: nodeIcon },
   { name: "MongoDB", icon: mongoIcon },
