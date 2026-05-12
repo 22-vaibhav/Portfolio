@@ -44,7 +44,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Backend | AI/ML Engineer
+          Full Stack MERN & AI/ML Engineer
         </motion.h3>
 
         {/* DESCRIPTION */}
@@ -54,8 +54,8 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          I build scalable backend systems and AI-powered applications,
-          including Generative AI and Machine Learning solutions.
+          I build robust, scalable backend systems and production-ready AI applications.<br></br>
+          From LLM-powered products and multi-agent systems to deep learning models that solve real-world problems.
         </motion.p>
 
         {/* CTA */}
