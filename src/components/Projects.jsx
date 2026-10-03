@@ -79,12 +79,12 @@ export default function Projects() {
             <p className="tech"><strong>Tech:</strong> {project.tech}</p>
 
             <div className="project-links">
-              <button onClick={() => window.open(project.link)}>
-                Live Demo
-              </button>
-              <button onClick={() => window.open(project.github)}>
-                GitHub
-              </button>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <button>Live Demo</button>
+              </a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <button>GitHub</button>
+              </a>
             </div>
           </motion.div>
         ))}

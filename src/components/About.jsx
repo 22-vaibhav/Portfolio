@@ -22,30 +22,27 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <p>
-            I'm <strong>Vaibhav Prakash</strong>, a Software Engineer focused on
-            building scalable backend systems and AI-powered applications.
+            I am <strong>Vaibhav Prakash</strong>, a <strong>Cloud Full Stack Developer</strong> building scalable backend and full-stack apps.
           </p>
 
           <p>
-            During my internship at <strong>Tejas Networks</strong>, I worked on
-            automation frameworks, API monitoring tools, and CI/CD workflows,
-            improving system reliability and reducing manual effort.
+            I completed my Bachelor's in Computer Science from <strong>Siddaganga Institute of Technology</strong>.
           </p>
 
           <p>
-            I've also built AI-driven products that analyze data, generate insights,
-            and automate workflows combining software engineering with
-            intelligent systems.
+            I work at <strong>IBM</strong>, building my skills in Java, Spring, Spring Boot, cloud tech and enterprise-level apps.
           </p>
 
           <p>
-            I also have hands-on experience in Machine Learning and Deep Learning,
-            including NLP pipelines, sequence models, EDA, Text processing, and data analysis workflows.
+            As an <strong>R&D Engineer Intern at Tejas Networks</strong>, I gained experience in product verification, system-level integration testing, backend validation, API testing, SQL, Bash scripting, and Python for network management systems.
           </p>
 
           <p>
-            I enjoy solving complex problems, optimizing performance, and building
-            systems that are both efficient and impactful.
+            In my free time, I enjoy building AI-driven apps, and exploring concepts like LLMs, Generative AI, NLP, and multi-agent systems. I like diving into the details of how systems work, and building end-to-end solutions that take an idea from concept to production-ready software.
+          </p>
+
+          <p>
+            Right now, I'm looking to advance my backend and cloud engineering skills, and explore the confluence of software engineering and AI.
           </p>
         </motion.div>
 
@@ -58,28 +55,25 @@ export default function About() {
         >
           <h3>Experience</h3>
 
-          <p><strong>R&D Engineer Intern</strong></p>
-          <p>Tejas Networks, Bengaluru</p>
+          <strong>R&D Engineer Intern</strong><br></br>
+          Tejas Networks, Bengaluru<br></br>
+          Jan 2025 - Sept 2025
 
           <ul>
             <li>
-              Built Python-based automation frameworks for validating large-scale
-              network datasets, reducing manual testing effort by 25%.
+              Performed product verification and system integration testing for EMS/NMS platforms, validating 1,000+ network elements.
             </li>
 
             <li>
-              Developed API monitoring and load-testing tools, improving system
-              reliability by 15%.
+              Worked with SNMP, SFTP, SMTP, HTTP, REST APIs, SQL, Bash, and Python for backend validation and automation.
             </li>
 
             <li>
-              Diagnosed and resolved 20+ production issues across distributed
-              backend services.
+              Automated validation workflows, reducing manual verification effort by 25%.
             </li>
 
             <li>
-              Automated CI/CD validation workflows, reducing release cycle time
-              and regression defects.
+              Investigated and resolved 50+ software defects, supporting 3+ product releases.
             </li>
           </ul>
         </motion.div>

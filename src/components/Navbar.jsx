@@ -1,9 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const observerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,26 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  // Track active section via IntersectionObserver
+  useEffect(() => {
+    const sections = ["home", "about", "skills", "projects", "contact"];
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observerRef.current.observe(el);
+    });
+    return () => observerRef.current?.disconnect();
+  }, []);
+
   const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   const handleNavClick = () => setMenuOpen(false);
@@ -48,6 +70,7 @@ export default function Navbar() {
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
+              className={activeSection === item.toLowerCase() ? "nav-active" : ""}
               whileHover={{ y: -2, rotate: -1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -115,7 +138,9 @@ export default function Navbar() {
                   whileHover={{ x: 6, color: "var(--blue)" }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="mobile-nav-number">0{i + 1}.</span>
+                  <span className={`mobile-nav-number ${activeSection === item.toLowerCase() ? "mobile-nav-active" : ""}`}>
+                    0{i + 1}.
+                  </span>
                   {item}
                 </motion.a>
               ))}

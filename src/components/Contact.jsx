@@ -20,17 +20,19 @@ export default function Contact() {
     setStatus("sending");
 
     emailjs.send(
-      "service_v5j9ncd",
-      "template_ayhlq4r",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       form,
-      "IhqiT5wQ5zOT1Hz9O"
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setStatus(""), 4000);
     })
     .catch(() => {
       setStatus("error");
+      setTimeout(() => setStatus(""), 4000);
     });
   };
 
@@ -100,7 +102,7 @@ export default function Contact() {
             required
           />
 
-          <button type="submit">
+          <button type="submit" disabled={status === "sending"}>
             {status === "sending" ? "Sending..." : "Send Message"}
           </button>
 

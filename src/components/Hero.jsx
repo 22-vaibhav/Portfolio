@@ -44,7 +44,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Full Stack MERN & AI/ML Engineer
+          Cloud Full Stack Developer | Java & Spring Boot
         </motion.h3>
 
         {/* DESCRIPTION */}
@@ -54,8 +54,8 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          I build robust, scalable backend systems and production-ready AI applications.<br></br>
-          From LLM-powered products and multi-agent systems to deep learning models that solve real-world problems.
+          I build scalable backend and full-stack applications using Java, Spring Boot,
+          React, and cloud technologies, with a growing focus on AI-powered solutions.
         </motion.p>
 
         {/* CTA */}
@@ -65,25 +65,31 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          <motion.button
-            whileHover={{ scale: 1.05, rotate: 1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              window.open("https://github.com/22-vaibhav?tab=repositories", "_blank")
-            }}
+          <a
+            href="https://github.com/22-vaibhav?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View Projects
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View Projects
+            </motion.button>
+          </a>
 
-          <motion.button
-            whileHover={{ scale: 1.05, rotate: -1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() =>
-              window.open("https://drive.google.com/file/d/17SGKCjy3nGy_1btp9NSMXiS3p1nUV5q2/preview", "_blank")
-            }
+          <a
+            href="https://drive.google.com/file/d/17SGKCjy3nGy_1btp9NSMXiS3p1nUV5q2/preview"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Resume
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05, rotate: -1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Resume
+            </motion.button>
+          </a>
         </motion.div>
       </div>
 
