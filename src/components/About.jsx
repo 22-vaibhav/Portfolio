@@ -22,15 +22,15 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <p>
-            I am <strong>Vaibhav Prakash</strong>, a <strong>Cloud Full Stack Developer</strong> building scalable backend and full-stack apps.
+            Myself <strong>Vaibhav Prakash</strong>, currently working as a <strong>Application Developer</strong> in <strong>IBM</strong> building scalable backend and full-stack apps.
+          </p>
+
+          <p>
+            I am proficient with Java, Spring, Spring Boot, cloud tech and enterprise-level apps.
           </p>
 
           <p>
             I completed my Bachelor's in Computer Science from <strong>Siddaganga Institute of Technology</strong>.
-          </p>
-
-          <p>
-            I work at <strong>IBM</strong>, building my skills in Java, Spring, Spring Boot, cloud tech and enterprise-level apps.
           </p>
 
           <p>
@@ -55,27 +55,31 @@ export default function About() {
         >
           <h3>Experience</h3>
 
-          <strong>R&D Engineer Intern</strong><br></br>
-          Tejas Networks, Bengaluru<br></br>
-          Jan 2025 - Sept 2025
+          <div className="experience-scroll">
 
-          <ul>
-            <li>
-              Performed product verification and system integration testing for EMS/NMS platforms, validating 1,000+ network elements.
-            </li>
+            <div className="experience-entry">
+              <strong>Application Developer</strong><br />
+              IBM, Bengaluru<br />
+              <span className="exp-date">Oct 2025 – Present</span>
+              <ul>
+                <li>Building scalable enterprise applications using Java, Spring Boot, and cloud technologies.</li>
+                <li>Collaborating on full-stack solutions and contributing to backend architecture and API development.</li>
+              </ul>
+            </div>
 
-            <li>
-              Worked with SNMP, SFTP, SMTP, HTTP, REST APIs, SQL, Bash, and Python for backend validation and automation.
-            </li>
+            <div className="experience-entry">
+              <strong>R&D Engineer Intern</strong><br />
+              Tejas Networks, Bengaluru<br />
+              <span className="exp-date">Jan 2025 – Sept 2025</span>
+              <ul>
+                <li>Performed product verification and system integration testing for EMS/NMS platforms, validating 1,000+ network elements.</li>
+                <li>Worked with SNMP, SFTP, SMTP, HTTP, REST APIs, SQL, Bash, and Python for backend validation and automation.</li>
+                <li>Automated validation workflows, reducing manual verification effort by 25%.</li>
+                <li>Investigated and resolved 50+ software defects, supporting 3+ product releases.</li>
+              </ul>
+            </div>
 
-            <li>
-              Automated validation workflows, reducing manual verification effort by 25%.
-            </li>
-
-            <li>
-              Investigated and resolved 50+ software defects, supporting 3+ product releases.
-            </li>
-          </ul>
+          </div>
         </motion.div>
 
       </div>
