@@ -79,7 +79,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/17SGKCjy3nGy_1btp9NSMXiS3p1nUV5q2/preview"
+            href="https://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view?usp=sharinghttps://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view"
             target="_blank"
             rel="noopener noreferrer"
           >
