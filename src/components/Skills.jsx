@@ -10,9 +10,13 @@ import typescriptIcon from "../assets/icons/typescript.png";
 import mysqlIcon from "../assets/icons/mysql.png";
 import mongoIcon from "../assets/icons/mongo.png";
 import githubIcon from "../assets/icons/github.png";
+import gitIcon from "../assets/icons/git.png";
 import postmanIcon from "../assets/icons/postman.png";
 import pythonIcon from "../assets/icons/python.png";
 import langchainIcon from "../assets/icons/langchain.svg";
+import dockerIcon from "../assets/icons/docker.png";
+import llmIcon from "../assets/icons/llm.png"
+import genAiIcon from "../assets/icons/generative-ai.png"
 
 const skillCategories = [
   {
@@ -47,9 +51,9 @@ const skillCategories = [
     category: "Cloud & Tools",
     color: "var(--orange-light)",
     skills: [
-      { name: "Git", icon: githubIcon },
+      { name: "Git", icon: gitIcon },
       { name: "GitHub", icon: githubIcon },
-      { name: "Docker", icon: null },
+      { name: "Docker", icon: dockerIcon },
       { name: "Postman", icon: postmanIcon },
     ],
   },
@@ -59,8 +63,8 @@ const skillCategories = [
     skills: [
       { name: "Python", icon: pythonIcon },
       { name: "LangChain", icon: langchainIcon },
-      { name: "LLMs", icon: null },
-      { name: "Generative AI", icon: null },
+      { name: "LLMs", icon: llmIcon },
+      { name: "Generative AI", icon: genAiIcon },
     ],
   },
 ];
