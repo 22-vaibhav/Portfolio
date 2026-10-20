@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { contactData } from "../constants";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -43,7 +44,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
       >
-        Contact Me
+        {contactData.title}
       </motion.h2>
 
       <motion.p
@@ -52,8 +53,7 @@ export default function Contact() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        I'm open to software engineering roles, backend development opportunities,
-        and AI-focused projects. Let's build something impactful together.
+        {contactData.description}
       </motion.p>
 
       <motion.div
@@ -64,13 +64,20 @@ export default function Contact() {
       >
 
         {/* CONTACT INFO */}
-        <p><strong>Email:</strong> vaibhavprakash180@gmail.com</p>
-        <p><strong>Phone:</strong> +91-7903685272</p>
+        <p><strong>Email:</strong> {contactData.email}</p>
+        <p><strong>Phone:</strong> {contactData.phone}</p>
 
         <div className="contact-links">
-          <a href="https://www.linkedin.com/in/22-vaibhav" target="_blank">LinkedIn</a>
-          <a href="https://github.com/22-vaibhav" target="_blank">GitHub</a>
-          <a href="https://leetcode.com/u/vaibhav_p777" target="_blank">LeetCode</a>
+          {contactData.socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {social.name}
+            </a>
+          ))}
         </div>
 
         {/* FORM */}
@@ -79,7 +86,7 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder={contactData.form.placeholders.name}
             value={form.name}
             onChange={handleChange}
             required
@@ -88,7 +95,7 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder={contactData.form.placeholders.email}
             value={form.email}
             onChange={handleChange}
             required
@@ -96,21 +103,23 @@ export default function Contact() {
 
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder={contactData.form.placeholders.message}
             value={form.message}
             onChange={handleChange}
             required
           />
 
           <button type="submit" disabled={status === "sending"}>
-            {status === "sending" ? "Sending..." : "Send Message"}
+            {status === "sending"
+              ? contactData.form.buttonText.sending
+              : contactData.form.buttonText.idle}
           </button>
 
         </form>
 
         {/* STATUS MESSAGE */}
-        {status === "success" && <p>✅ Message sent successfully!</p>}
-        {status === "error" && <p>❌ Failed to send message.</p>}
+        {status === "success" && <p>{contactData.form.statusMessages.success}</p>}
+        {status === "error" && <p>{contactData.form.statusMessages.error}</p>}
 
       </motion.div>
 

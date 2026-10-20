@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { navBrand, navItems } from "../constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
 
   // Track active section via IntersectionObserver
   useEffect(() => {
-    const sections = ["home", "about", "skills", "projects", "contact"];
+    const sections = navItems.map((item) => item.toLowerCase());
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -50,8 +51,6 @@ export default function Navbar() {
     return () => observerRef.current?.disconnect();
   }, []);
 
-  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
-
   const handleNavClick = () => setMenuOpen(false);
 
   return (
@@ -62,7 +61,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="logo">Vaibhav Prakash</h2>
+        <h2 className="logo">{navBrand}</h2>
 
         {/* Desktop Links */}
         <div className="nav-links desktop-links">

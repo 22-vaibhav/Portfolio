@@ -1,6 +1,5 @@
-// import profile from "../assets/profile-sketch.png";
-import profile from "../assets/cartoon-profile-sketch.jpeg";
 import { motion } from "framer-motion";
+import { heroData } from "../constants";
 
 export default function Hero() {
   return (
@@ -19,7 +18,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          Hi, I'm <span className="highlight">Vaibhav Prakash</span>
+          {heroData.greeting} <span className="highlight">{heroData.name}</span>
         </motion.h1>
 
         {/* DRAW LINE */}
@@ -44,7 +43,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Cloud Full Stack Developer | Java & Spring Boot
+          {heroData.role}
         </motion.h3>
 
         {/* DESCRIPTION */}
@@ -54,8 +53,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          I build scalable backend and full-stack applications using Java, Spring Boot,
-          React, and cloud technologies, with a growing focus on AI-powered solutions.
+          {heroData.description}
         </motion.p>
 
         {/* CTA */}
@@ -65,31 +63,21 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          <a
-            href="https://github.com/22-vaibhav?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              whileTap={{ scale: 0.95 }}
+          {heroData.buttons.map((btn) => (
+            <a
+              key={btn.label}
+              href={btn.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View Projects
-            </motion.button>
-          </a>
-
-          <a
-            href="https://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view?usp=sharinghttps://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05, rotate: -1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Resume
-            </motion.button>
-          </a>
+              <motion.button
+                whileHover={{ scale: 1.05, rotate: btn.rotate }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {btn.label}
+              </motion.button>
+            </a>
+          ))}
         </motion.div>
       </div>
 
@@ -100,7 +88,7 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0, rotate: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <img src={profile} alt="Vaibhav Prakash" />
+        <img src={heroData.profileImage} alt={heroData.name} />
       </motion.div>
 
     </motion.section>
