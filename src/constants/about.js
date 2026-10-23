@@ -1,7 +1,7 @@
 export const aboutData = {
   title: "About Me",
   paragraphs: [
-    "Myself <strong>Vaibhav Prakash</strong>, currently working as a <strong>Application Developer</strong> in <strong>IBM</strong> building scalable backend and full-stack apps.",
+    "Myself <strong>Vaibhav Prakash</strong>, currently working as an <strong>Application Developer</strong> in <strong>IBM</strong> building scalable backend and full-stack apps.",
     "I am proficient with Java, Spring, Spring Boot, cloud tech and enterprise-level apps.",
     "I completed my Bachelor's in Computer Science from <strong>Siddaganga Institute of Technology</strong>.",
     "As an <strong>R&D Engineer Intern at Tejas Networks</strong>, I gained experience in product verification, system-level integration testing, backend validation, API testing, SQL, Bash scripting, and Python for network management systems.",
