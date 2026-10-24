@@ -1,6 +1,6 @@
 import javaIcon from "../assets/icons/java.png";
-import springbootIcon from "../assets/icons/springboot.png";
-import springIcon from "../assets/icons/Spring.svg";
+import springbootIcon from "../assets/icons/Spring.svg";
+import nodeIcon from "../assets/icons/node.png";
 import restapiIcon from "../assets/icons/restapi.png";
 import reactIcon from "../assets/icons/react.png";
 import javascriptIcon from "../assets/icons/javascript.png";
@@ -25,8 +25,7 @@ export const skillCategories = [
     skills: [
       { name: "Java", icon: javaIcon, link: "#" },
       { name: "Spring Boot", icon: springbootIcon, link: "#" },
-      { name: "Spring MVC", icon: springIcon, link: "#" },
-      { name: "Spring Security", icon: springIcon, link: "#" },
+      { name: "Node.js", icon: nodeIcon, link: "#" },
       { name: "REST APIs", icon: restapiIcon, link: "#" },
     ],
   },
@@ -34,9 +33,9 @@ export const skillCategories = [
     category: "Frontend",
     color: "var(--green-light)",
     skills: [
-      { name: "React", icon: reactIcon, link: "#" },
       { name: "JavaScript", icon: javascriptIcon, link: "#" },
       { name: "TypeScript", icon: typescriptIcon, link: "#" },
+      { name: "React.js", icon: reactIcon, link: "#" },
     ],
   },
   {
