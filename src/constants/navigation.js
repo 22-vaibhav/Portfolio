@@ -1,3 +1,3 @@
 export const navBrand = "Vaibhav Prakash";
 
-export const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+export const navItems = ["Home", "About", "Skills", "Certifications", "Projects", "Contact"];

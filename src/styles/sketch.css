@@ -401,6 +401,86 @@ button:hover {
 }
 
 /* ============================= */
+/* 🏅 CERTIFICATIONS */
+/* ============================= */
+.certs-section {
+  padding: 80px 30px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.certs-title {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  border-bottom: 3px solid var(--black);
+  display: inline-block;
+  background: linear-gradient(transparent 60%, var(--yellow) 60%);
+}
+
+.certs-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-category {
+  text-align: left;
+}
+
+.certs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 16px;
+  border: 2px solid var(--black);
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+
+  box-shadow:
+    3px 3px 0 var(--black),
+    6px 6px 0 rgba(77,171,247,0.2);
+}
+
+.cert-name {
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+
+.cert-meta {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.cert-toggle-btn {
+  margin-top: 14px;
+  padding: 6px 18px;
+  font-size: 0.88rem;
+  background: var(--yellow);
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cert-toggle-btn:hover {
+  background: var(--blue);
+  color: white;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--black);
+}
+
+
+/* ============================= */
 /* 🚀 PROJECTS */
 /* ============================= */
 .projects-section {
@@ -598,6 +678,7 @@ button:disabled {
 
   .about-section,
   .skills-section,
+  .certs-section,
   .projects-section,
   .contact-section {
     padding: 60px 20px;
@@ -687,6 +768,15 @@ button:disabled {
   }
 
   .skills-categories {
+    max-width: 100%;
+  }
+
+  /* CERTIFICATIONS */
+  .certs-section {
+    padding: 60px 20px;
+  }
+
+  .certs-categories {
     max-width: 100%;
   }
 
@@ -786,6 +876,11 @@ button:disabled {
 
   /* SKILLS */
   .skills-title {
+    font-size: 1.8rem;
+  }
+
+  /* CERTIFICATIONS */
+  .certs-title {
     font-size: 1.8rem;
   }
 

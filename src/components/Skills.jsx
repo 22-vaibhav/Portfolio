@@ -39,39 +39,32 @@ export default function Skills() {
               }}
             >
               {cat.skills.map((skill, index) => (
-                <a
+                <motion.div
                   key={skill.name}
-                  href={skill.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
+                  className="skill-card"
+                  style={{ background: cat.color }}
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  whileHover={{
+                    scale: 1.12,
+                    rotate: index % 2 === 0 ? 2 : -2,
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 >
-                  <motion.div
-                    className="skill-card"
-                    style={{ background: cat.color }}
-                    variants={{
-                      hidden: { opacity: 0, y: 30 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    whileHover={{
-                      scale: 1.12,
-                      rotate: index % 2 === 0 ? 2 : -2,
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                  >
-                    {skill.icon ? (
-                      <div className="icon-wrapper">
-                        <img src={skill.icon} alt={skill.name} />
-                      </div>
-                    ) : (
-                      <div className="icon-wrapper icon-text-only">
-                        <span>{skill.name.charAt(0)}</span>
-                      </div>
-                    )}
-                    <p>{skill.name}</p>
-                  </motion.div>
-                </a>
+                  {skill.icon ? (
+                    <div className="icon-wrapper">
+                      <img src={skill.icon} alt={skill.name} />
+                    </div>
+                  ) : (
+                    <div className="icon-wrapper icon-text-only">
+                      <span>{skill.name.charAt(0)}</span>
+                    </div>
+                  )}
+                  <p>{skill.name}</p>
+                </motion.div>
               ))}
             </motion.div>
 
