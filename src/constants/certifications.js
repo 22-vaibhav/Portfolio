@@ -39,8 +39,9 @@ export const certificationCategories = [
     category: "AI",
     color: "var(--yellow)",
     certs: [
-      { name: "Generative AI for Complete Beginners", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-1c457a6e-f6da-484d-9134-401593d7adeb" },
       { name: "Claude Certified Developer - Foundations", issuer: "Anthropic", year: "2026", link: "https://www.credly.com/badges/db2d1daf-3859-493d-8d92-58876f346a32" },
+      { name: "Accelerate Development with Antigravity", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/f19b26eb-5654-4008-8bdd-a5c3883cea2c/public_url" },
+      { name: "Generative AI for Complete Beginners", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-1c457a6e-f6da-484d-9134-401593d7adeb" },
       { name: "OpenAI Foundational Knowledge", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1JmcCwtKW6ylZCpO1m-rN6JYrzyfudu-u" },
       { name: "OpenAI Technical Practitioner", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1pOW6g2VF6jNKzTVbjuRu6QwXoqobovC_" },
       { name: "API Development Practitioner", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1NWZdUkwKyz32bTatdc4gZa9fG1LclpZD" },
