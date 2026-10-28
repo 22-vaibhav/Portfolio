@@ -44,6 +44,7 @@ export const certificationCategories = [
       { name: "OpenAI Foundational Knowledge", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1JmcCwtKW6ylZCpO1m-rN6JYrzyfudu-u" },
       { name: "OpenAI Technical Practitioner", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1pOW6g2VF6jNKzTVbjuRu6QwXoqobovC_" },
       { name: "API Development Practitioner", issuer: "OpenAI", year: "2026", link: "https://drive.google.com/file/d/1NWZdUkwKyz32bTatdc4gZa9fG1LclpZD" },
+      { name: "Talking to AI: Prompt Engineering for Project Managers", issuer: "Project Management Institute", year: "2026", link: "https://www.credly.com/badges/2c21b2d9-e97b-4c51-8a79-fd474ecddad9/public_url" },
     ],
   },
 ];
