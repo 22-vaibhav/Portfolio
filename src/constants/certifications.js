@@ -1,4 +1,4 @@
-export const certificationsTitle = "Certifications";
+export const certificationsTitle = "Certifications & Badges";
 
 export const certificationCategories = [
   // {
@@ -31,7 +31,7 @@ export const certificationCategories = [
     color: "var(--orange-light)",
     certs: [
       // { name: "Docker Essentials", issuer: "IBM", year: "2024", link: "#" },
-      { name: "Google Cloud Platform (GCP) Fundamentals for Beginners", issuer: "Udemy", year: "2026", link: "#" },
+      { name: "Google Cloud Platform (GCP) Fundamentals for Beginners", issuer: "Udemy", year: "2026", link: "https://www.udemy.com/certificate/UC-0ede89b0-ccfb-420c-b010-fb0368674566/" },
       { name: "The Git & Github Bootcamp", issuer: "Udemy", year: "2026", link: "#" },
       // { name: "Postman API Testing", issuer: "Postman", year: "2023", link: "#" },
     ],
