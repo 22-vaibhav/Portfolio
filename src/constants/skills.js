@@ -10,6 +10,7 @@ import mongoIcon from "../assets/icons/mongo.png";
 import githubIcon from "../assets/icons/github.png";
 import gitIcon from "../assets/icons/git.png";
 import postmanIcon from "../assets/icons/postman.png";
+import gcpIcon from "../assets/icons/gcp.png";
 import pythonIcon from "../assets/icons/python.png";
 import langchainIcon from "../assets/icons/langchain.svg";
 import dockerIcon from "../assets/icons/docker.png";
@@ -52,18 +53,19 @@ export const skillCategories = [
     skills: [
       { name: "Git", icon: gitIcon },
       { name: "GitHub", icon: githubIcon },
-      { name: "Docker", icon: dockerIcon },
+      { name: "GCP", icon: gcpIcon },
+      // { name: "Docker", icon: dockerIcon },
       { name: "Postman", icon: postmanIcon },
     ],
   },
-  {
-    category: "AI",
-    color: "var(--yellow)",
-    skills: [
-      { name: "Python", icon: pythonIcon },
-      { name: "LangChain", icon: langchainIcon },
-      { name: "LLMs", icon: llmIcon },
-      { name: "Generative AI", icon: genAiIcon },
-    ],
-  },
+  // {
+  //   category: "AI",
+  //   color: "var(--yellow)",
+  //   skills: [
+  //     { name: "Python", icon: pythonIcon },
+  //     { name: "LangChain", icon: langchainIcon },
+  //     { name: "LLMs", icon: llmIcon },
+  //     { name: "Generative AI", icon: genAiIcon },
+  //   ],
+  // },
 ];
