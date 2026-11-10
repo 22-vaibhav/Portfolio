@@ -23,6 +23,7 @@ export const certificationCategories = [
     color: "var(--purple-light)",
     certs: [
       { name: "Introduction to the MongoDB", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-2d47f529-b97c-4462-adb7-ce3d08939226" },
+      { name: "PL/SQL Fast Track – Beginner to Advanced ", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-1a30a39c-4f00-4958-a14e-e02fd1332e7c" },
       // { name: "MySQL for Developers", issuer: "Oracle", year: "2023", link: "#" },
     ],
   },
