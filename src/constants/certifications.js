@@ -48,7 +48,8 @@ export const certificationCategories = [
       // { name: "Accelerate Development with Antigravity", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/f19b26eb-5654-4008-8bdd-a5c3883cea2c/public_url" },
       // { name: "Deploy an Agent with Agent Development Kit (ADK)", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/439b7b28-70c8-4df7-b998-47cee1cf43f7/public_url" },
       // { name: "Evaluate and Improve Agent Development Kit Agents", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/d3b79bb6-5f6e-4c0f-bd78-e40c0850ffe7/public_url" },
-      { name: "Certified Partner Specialist Gemini Enterprise Agent Development", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/dff3fc36-1814-487d-ac1f-e8a12d5d5fef/public_url" },
+      // { name: "Certified Partner Specialist Gemini Enterprise Agent Development", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/dff3fc36-1814-487d-ac1f-e8a12d5d5fef/public_url" },
+      { name: "Build with Gemini", issuer: "Google Cloud", year: "2026", link: "https://www.credly.com/badges/2c5a0fb2-6ac0-41f4-9543-7c19ff41c298/public_url" },
 
       { name: "Generative AI for Complete Beginners", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-1c457a6e-f6da-484d-9134-401593d7adeb" },
       { name: "Prompt Engineering for Everyone Bootcamp", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-98d22995-f07e-4233-93aa-e42eabb1061e" },
