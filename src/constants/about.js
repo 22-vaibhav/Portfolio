@@ -1,4 +1,5 @@
 export const aboutData = {
+  label: "01 / ABOUT",
   title: "About Me",
   paragraphs: [
     "Myself <strong>Vaibhav Prakash</strong>, currently working as an <strong>Application Developer</strong> in <strong>IBM</strong> building scalable backend and full-stack apps.",

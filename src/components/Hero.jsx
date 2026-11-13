@@ -18,23 +18,14 @@ export default function Hero() {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          {heroData.greeting} <span className="highlight">{heroData.name}</span>
+          {heroData.greeting}{" "}
+          <span className="hero-name">
+            <span>{heroData.name}</span>
+            <svg className="hero-scribble" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M40 14 C 120 -2, 250 4, 285 30 C 305 52, 230 76, 140 74 C 60 72, 6 60, 12 36 C 18 14, 90 4, 170 6" />
+            </svg>
+          </span>
         </motion.h1>
-
-        {/* DRAW LINE */}
-        <motion.svg width="220" height="20">
-          <motion.line
-            x1="0"
-            y1="10"
-            x2="220"
-            y2="10"
-            stroke="black"
-            strokeWidth="2"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1 }}
-          />
-        </motion.svg>
 
         {/* ROLE */}
         <motion.h3
@@ -83,12 +74,22 @@ export default function Hero() {
 
       {/* RIGHT */}
       <motion.div
-        className="hero-img sketch-box"
+        className="hero-photo"
         initial={{ opacity: 0, x: 50, rotate: -8 }}
-        animate={{ opacity: 1, x: 0, rotate: 1 }}
+        animate={{ opacity: 1, x: 0, rotate: 2 }}
         transition={{ delay: 0.5 }}
       >
-        <img src={heroData.profileImage} alt={heroData.name} />
+        <div className="hero-tape" aria-hidden="true" />
+        <div className="hero-img sketch-box">
+          <img src={heroData.profileImage} alt={heroData.name} />
+          <div className="hero-caption">{heroData.caption}</div>
+        </div>
+        <svg className="hero-star hero-star-top" viewBox="0 0 46 46" aria-hidden="true">
+          <path d="M23 3 L27 18 L43 23 L27 28 L23 43 L19 28 L3 23 L19 18 Z" />
+        </svg>
+        <svg className="hero-star hero-star-bottom" viewBox="0 0 46 46" aria-hidden="true">
+          <path d="M23 3 L27 18 L43 23 L27 28 L23 43 L19 28 L3 23 L19 18 Z" />
+        </svg>
       </motion.div>
 
     </motion.section>

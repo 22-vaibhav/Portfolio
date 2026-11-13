@@ -7,6 +7,7 @@ export const heroData = {
   description:
     "I build scalable backend and full-stack applications using Java, Spring Boot, React, and cloud technologies, with a growing focus on AI-powered solutions.",
   profileImage: profile,
+  caption: "that's me!",
   buttons: [
     {
       label: "View Projects",
