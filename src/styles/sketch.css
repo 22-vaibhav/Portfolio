@@ -23,6 +23,7 @@
 body {
   font-family: 'Patrick Hand', cursive;
   background: url('/src/assets/paper.jpg');
+  /* background: #FAF9F6; */
   background-size: cover;
   color: #222;
 }
@@ -184,6 +185,9 @@ body {
 button {
   padding: 10px 22px;
   border: 2px solid var(--black);
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
   background: var(--yellow);
   box-shadow: 3px 3px 0 var(--black);
   cursor: pointer;
@@ -353,6 +357,7 @@ button:hover {
 .skill-card {
   padding: 12px 10px;
   border: 2px solid var(--black);
+  border-radius: 10px;
   min-width: 90px;
   text-align: center;
 
@@ -373,6 +378,7 @@ button:hover {
   display: inline-block;
   padding: 8px;
   border: 1.5px dashed var(--black);
+  border-radius: 8px;
   margin-bottom: 8px;
 }
 
@@ -389,7 +395,7 @@ button:hover {
 }
 
 .skill-card p {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   margin-top: 4px;
 }
 
@@ -464,9 +470,11 @@ button:hover {
 .cert-toggle-btn {
   margin-top: 14px;
   padding: 6px 18px;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   background: var(--yellow);
   border: 2px solid var(--black);
+  border-radius: 10px;
   box-shadow: 3px 3px 0 var(--black);
   cursor: pointer;
   font-family: inherit;
@@ -595,6 +603,7 @@ button:hover {
 }
 
 .contact-box {
+  border-radius: 16px;
   max-width: 500px;
   margin: 0 auto;
   padding: 25px;
@@ -643,6 +652,7 @@ button:disabled {
   margin: 10px 0;
   padding: 10px;
   border: 2px solid black;
+  border-radius: 10px;
   background: white;
   font-family: inherit;
   box-sizing: border-box;
@@ -967,6 +977,7 @@ button:disabled {
 
   background: var(--yellow);
   border: 2px solid var(--black);
+  border-radius: 10px;
   box-shadow: 3px 3px 0 var(--black);
   cursor: pointer;
 
@@ -993,6 +1004,7 @@ button:disabled {
   padding: 8px;
   background: var(--yellow);
   border: 2px solid black;
+  border-radius: 10px;
   box-shadow: 2px 2px 0 black;
   cursor: pointer;
   width: 42px;
