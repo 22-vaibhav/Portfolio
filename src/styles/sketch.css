@@ -25,7 +25,17 @@ body {
   background: url('/src/assets/paper.jpg');
   /* background: #FAF9F6; */
   background-size: cover;
+  background-attachment: fixed;
   color: #222;
+}
+
+h1, h2, h3 {
+  font-family: 'Kalam', cursive;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--blue);
+  outline-offset: 3px;
 }
 
 /* ============================= */
@@ -33,6 +43,7 @@ body {
 /* ============================= */
 .sketch-box {
   border: 2px solid var(--black);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   padding: 15px;
   background: rgba(255,255,255,0.85);
 
@@ -367,7 +378,7 @@ button:hover {
 .skill-card {
   padding: 12px 10px;
   border: 2px solid var(--black);
-  border-radius: 10px;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   min-width: 90px;
   text-align: center;
 
@@ -458,7 +469,7 @@ button:hover {
   gap: 6px;
   padding: 16px 22px;
   border: 2px solid var(--black);
-  border-radius: 14px;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   text-decoration: none;
   color: #222;
   cursor: pointer;
@@ -541,7 +552,7 @@ button:hover {
   box-sizing: border-box;
   padding: 20px;
   border: 2px solid var(--black);
-  border-radius: 16px;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   background: var(--blue-light);
   text-align: left;
 
@@ -602,101 +613,165 @@ button:hover {
 /* ============================= */
 .contact-section {
   padding: 60px 40px;
-  text-align: center;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-bottom: 3px solid var(--black);
-  display: inline-block;
-  background: linear-gradient(transparent 60%, var(--yellow) 60%);
+.contact-heading {
+  text-align: center;
+  margin-bottom: 46px;
 }
 
-/* Single card: info (left) + form (right) */
-.contact-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  text-align: left;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 20px;
-  background: white;
-  transform: none;
+.contact-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--red-ink);
 }
 
-.contact-info {
-  padding: 36px;
-  box-sizing: border-box;
-  background: var(--blue-light);
-  border-right: 2px dashed var(--black);
+.contact-heading h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 4px 0 0;
+}
+
+.contact-squiggle {
+  display: block;
+  width: 170px;
+  height: 16px;
+  margin: 2px auto 22px;
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 3.5;
+  stroke-linecap: round;
 }
 
 .contact-desc {
-  font-size: 1.35rem;
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.3rem;
   line-height: 1.6;
-  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Postcard: striped airmail border around a cream card */
+.contact-postcard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px;
+  background: repeating-linear-gradient(135deg, var(--red) 0 18px, #fff 18px 34px, var(--blue) 34px 52px, #fff 52px 68px);
+  border: 2px solid var(--black);
+  border-radius: 28px 10px 30px 12px / 12px 26px 10px 24px;
+  box-shadow: 5px 5px 0 var(--black);
+  transform: rotate(-0.5deg);
+  text-align: left;
+}
+
+.contact-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  padding: 40px 44px 44px;
+  background: var(--orange-light);
+  border: 2px solid var(--black);
+  border-radius: 18px 6px 20px 8px / 8px 16px 6px 18px;
+}
+
+/* Stamp with a perforated dashed edge */
+.contact-stamp {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+}
+
+.contact-stamp-inner {
+  width: 66px;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 7px;
+  background: white;
+  border: 2.5px dashed var(--black);
+  transform: rotate(3deg);
+}
+
+.contact-stamp-inner svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  background: var(--yellow);
+  border: 2px solid var(--black);
+}
+
+.contact-stamp-inner path {
+  fill: var(--red);
+  stroke: var(--black);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.contact-info h3 {
+  margin: 0 0 22px;
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-top: 20px;
-  border-top: 2px dashed var(--black);
+  gap: 14px;
+  margin-bottom: 24px;
 }
 
 .contact-detail {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.1rem;
-  color: inherit;
+  font-size: 1.25rem;
+  color: #222;
   text-decoration: none;
   word-break: break-all;
 }
 
 .contact-detail:hover {
-  color: var(--purple);
+  color: var(--blue-ink);
 }
 
-.contact-icon {
-  width: 22px;
-  height: 22px;
+.contact-icon,
+.contact-detail svg {
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
-.contact-box {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 36px;
-  background: var(--orange-light);
+.contact-detail svg {
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .contact-links {
-  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
+  margin-bottom: 34px;
 }
 
 .contact-social {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px;
-  font-size: 1.05rem;
-  font-weight: 600;
+  padding: 6px 18px;
+  font-size: 1.2rem;
+  color: var(--purple-ink);
   text-decoration: none;
-  color: var(--black);
   background: white;
   border: 2px solid var(--black);
-  border-radius: 10px;
+  border-radius: 14px 6px 16px 6px / 6px 14px 6px 16px;
   box-shadow: 3px 3px 0 var(--black);
-  transition: all 0.2s ease;
 }
 
 .contact-social:hover {
@@ -705,8 +780,87 @@ button:hover {
   box-shadow: 1px 1px 0 var(--black);
 }
 
-.contact-box button {
-  margin-top: 15px;
+/* Notebook-style form fields */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 62px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.2rem;
+  color: #222;
+  background: white;
+  border: 2px solid var(--black);
+  border-radius: 12px 5px 14px 5px / 5px 12px 5px 14px;
+  box-shadow: inset 0 -3px 0 rgba(77, 171, 247, 0.3);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--blue-ink);
+  box-shadow: 3px 3px 0 var(--blue);
+}
+
+.contact-form textarea {
+  height: 130px;
+  resize: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 12px 30px;
+  font-size: 1.25rem;
+  background: var(--yellow);
+  border-radius: 14px 6px 16px 6px / 6px 14px 6px 16px;
+}
+
+/* Success / error as a sticky note */
+.contact-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  padding: 14px 20px;
+  background: var(--yellow);
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.25);
+  transform: rotate(-2deg);
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.contact-footer {
+  max-width: 1100px;
+  margin: 84px auto 0;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.contact-footer svg {
+  display: block;
+  width: 100%;
+  height: 14px;
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.contact-footer p {
+  margin: 18px 0 0;
+  font-size: 1.2rem;
+  color: #4a4a4a;
 }
 
 button:disabled {
@@ -716,29 +870,6 @@ button:disabled {
   box-shadow: 3px 3px 0 var(--black);
 }
 
-/* ============================= */
-/* 📋 CONTACT FORM (global) */
-/* ============================= */
-.contact-form {
-  margin-top: 0;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background: white;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  height: 120px;
-  resize: none;
-}
 
 /* ============================= */
 /* 💻 LAPTOP (max 1100px) */
@@ -887,16 +1018,13 @@ button:disabled {
 
   .contact-card {
     grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 36px 28px;
   }
 
-  .contact-info {
-    border-right: none;
-    border-bottom: 2px dashed var(--black);
-  }
-
-  .contact-links {
-    flex-wrap: wrap;
-    gap: 12px;
+  .contact-stamp {
+    top: 14px;
+    right: 14px;
   }
 }
 
@@ -1001,18 +1129,28 @@ button:disabled {
   }
 
   /* CONTACT */
-  .contact-section h2 {
-    font-size: 1.8rem;
+  .contact-heading h2 {
+    font-size: 2.2rem;
   }
 
-  .contact-info,
-  .contact-box {
-    padding: 20px;
+  .contact-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-postcard {
+    padding: 8px;
+  }
+
+  .contact-card {
+    padding: 28px 18px 24px;
+  }
+
+  .contact-stamp-inner {
+    width: 52px;
+    height: 64px;
   }
 
   .contact-links {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
   }
 }

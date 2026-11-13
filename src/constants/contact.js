@@ -1,5 +1,10 @@
 export const contactData = {
+  label: "05 / CONTACT",
   title: "Contact Me",
+  sayHello: "Say hello",
+  emailLabel: "Email:",
+  phoneLabel: "Phone:",
+  footer: "Designed and built by Vaibhav Prakash",
   description:
     "I'm open to software engineering roles, backend development opportunities, and AI-focused projects. Let's build something impactful together.",
   email: "vaibhavprakash180@gmail.com",
@@ -29,8 +34,8 @@ export const contactData = {
       sending: "Sending...",
     },
     statusMessages: {
-      success: "✅ Message sent successfully!",
-      error: "❌ Failed to send message.",
+      success: "Message sent successfully!",
+      error: "Failed to send message.",
     },
   },
 };

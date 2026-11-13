@@ -76,103 +76,134 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
 
-      <motion.h2
+      <motion.div
+        className="contact-heading"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
       >
-        {contactData.title}
-      </motion.h2>
+        {/* <div className="contact-label">{contactData.label}</div> */}
+        <h2>{contactData.title}</h2>
+        <svg className="contact-squiggle" viewBox="0 0 160 14" aria-hidden="true">
+          <path d="M3 9 C 13 1, 23 1, 33 9 S 53 17, 63 9 S 83 1, 93 9 S 113 17, 123 9 S 143 1, 157 8" />
+        </svg>
+        <p className="contact-desc">{contactData.description}</p>
+      </motion.div>
 
-      {/* SINGLE CARD: info on the left, form on the right */}
+      {/* POSTCARD: info on the left, form on the right */}
       <motion.div
-        className="contact-card sketch-box"
+        className="contact-postcard"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
+        <div className="contact-card">
 
-      {/* LEFT: DESCRIPTION, CONTACT INFO, LINKS */}
-      <div className="contact-info">
-        <p className="contact-desc">{contactData.description}</p>
+          <div className="contact-stamp" aria-hidden="true">
+            <div className="contact-stamp-inner">
+              <svg viewBox="0 0 46 46">
+                <path d="M23 3 L27 18 L43 23 L27 28 L23 43 L19 28 L3 23 L19 18 Z" />
+              </svg>
+            </div>
+          </div>
 
-        <div className="contact-details">
-          <a href={`mailto:${contactData.email}`} className="contact-detail">
-            <StrokeIcon>
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="m3 7 9 6 9-6" />
-            </StrokeIcon>
-            <span>{contactData.email}</span>
-          </a>
-          <a href={`tel:${contactData.phone}`} className="contact-detail">
-            <StrokeIcon>
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-            </StrokeIcon>
-            <span>{contactData.phone}</span>
-          </a>
+          {/* LEFT: CONTACT INFO, LINKS */}
+          <div className="contact-info">
+            <h3>{contactData.sayHello}</h3>
+
+            <div className="contact-details">
+              <a href={`mailto:${contactData.email}`} className="contact-detail">
+                <StrokeIcon>
+                  <rect x="2.5" y="5" width="21" height="16" rx="2.5" />
+                  <path d="M3 7 L13 15 L23 7" />
+                </StrokeIcon>
+                <span><strong>{contactData.emailLabel}</strong> {contactData.email}</span>
+              </a>
+              <a href={`tel:${contactData.phone}`} className="contact-detail">
+                <StrokeIcon>
+                  <path d="M6 3 H10 L12 8 L9.5 10 C 11 13, 13 15, 16 16.5 L18 14 L23 16 V20 C23 21.5, 21.5 23, 20 23 C 11 22.5, 3.5 15, 3 6 C 3 4.5, 4.5 3, 6 3 Z" />
+                </StrokeIcon>
+                <span><strong>{contactData.phoneLabel}</strong> {contactData.phone}</span>
+              </a>
+            </div>
+
+            <div className="contact-links">
+              {contactData.socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-social"
+                >
+                  <BrandIcon name={social.name} />
+                  {social.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT: FORM */}
+          <div className="contact-box">
+
+            {/* STATUS MESSAGE */}
+            {status === "success" && (
+              <div className="contact-note">{contactData.form.statusMessages.success}</div>
+            )}
+            {status === "error" && (
+              <div className="contact-note">{contactData.form.statusMessages.error}</div>
+            )}
+
+            <form onSubmit={sendEmail} className="contact-form">
+
+              <input
+                type="text"
+                name="name"
+                placeholder={contactData.form.placeholders.name}
+                aria-label={contactData.form.placeholders.name}
+                value={form.name}
+                onChange={handleChange}
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder={contactData.form.placeholders.email}
+                aria-label={contactData.form.placeholders.email}
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+
+              <textarea
+                name="message"
+                placeholder={contactData.form.placeholders.message}
+                aria-label={contactData.form.placeholders.message}
+                value={form.message}
+                onChange={handleChange}
+                required
+              />
+
+              <button type="submit" disabled={status === "sending"}>
+                {status === "sending"
+                  ? contactData.form.buttonText.sending
+                  : contactData.form.buttonText.idle}
+              </button>
+
+            </form>
+
+          </div>
+
         </div>
-
-        <div className="contact-links">
-          {contactData.socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-social"
-            >
-              <BrandIcon name={social.name} />
-              {social.name}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* RIGHT: FORM */}
-      <div className="contact-box">
-
-        <form onSubmit={sendEmail} className="contact-form">
-
-          <input
-            type="text"
-            name="name"
-            placeholder={contactData.form.placeholders.name}
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder={contactData.form.placeholders.email}
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-
-          <textarea
-            name="message"
-            placeholder={contactData.form.placeholders.message}
-            value={form.message}
-            onChange={handleChange}
-            required
-          />
-
-          <button type="submit" disabled={status === "sending"}>
-            {status === "sending"
-              ? contactData.form.buttonText.sending
-              : contactData.form.buttonText.idle}
-          </button>
-
-        </form>
-
-        {/* STATUS MESSAGE */}
-        {status === "success" && <p>{contactData.form.statusMessages.success}</p>}
-        {status === "error" && <p>{contactData.form.statusMessages.error}</p>}
-
-      </div>
-
       </motion.div>
+
+      {/* FOOTER */}
+      <div className="contact-footer">
+        <svg viewBox="0 0 1000 14" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M2 8 C 60 2, 120 12, 180 7 S 300 3, 360 8 S 480 12, 540 6 S 660 3, 720 8 S 840 12, 900 6 S 970 4, 998 8" />
+        </svg>
+        <p>{contactData.footer}</p>
+      </div>
 
     </section>
   );
