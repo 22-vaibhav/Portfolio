@@ -933,14 +933,14 @@ button:hover {
 /* 🚀 PROJECTS */
 /* ============================= */
 .projects-section {
-  padding: 60px 40px;
+  padding: 40px 40px 30px;
   text-align: center;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .projects-heading {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .projects-heading h2 {
@@ -965,13 +965,14 @@ button:hover {
 .projects-container {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min(460px, 85%);
-  column-gap: 40px;
+  grid-auto-columns: min(520px, 85%);
+  column-gap: 36px;
   row-gap: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 36px 22px 36px;
+  padding: 30px 22px 28px;
 }
 
 /* Each card spans 5 rows via subgrid so title / description / points / tech / links
@@ -984,7 +985,7 @@ button:hover {
   row-gap: 0;
   scroll-snap-align: start;
   box-sizing: border-box;
-  padding: 36px 30px 30px;
+  padding: 28px 26px 22px;
   border: 2px solid var(--black);
   border-radius: 28px 10px 30px 12px / 12px 26px 10px 24px;
   background: var(--blue-light);
@@ -1053,37 +1054,37 @@ button:hover {
 }
 
 .project-card h3 {
-  margin: 0 0 12px;
-  font-size: 1.45rem;
-  line-height: 1.35;
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  line-height: 1.3;
   color: #222;
 }
 
 .project-desc {
-  margin: 0 0 14px;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  line-height: 1.4;
   color: #333;
 }
 
 .project-card ul {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   padding-left: 22px;
 }
 
 .project-card li {
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  margin-bottom: 3px;
+  font-size: 1rem;
+  line-height: 1.4;
   color: #222;
 }
 
 .tech {
-  margin: 0 0 4px;
-  padding-top: 12px;
+  margin: 0 0 2px;
+  padding-top: 8px;
   border-top: 2px dashed rgba(0, 0, 0, 0.35);
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.4;
   color: #222;
 }
 
@@ -1091,15 +1092,15 @@ button:hover {
   align-self: end;
   display: flex;
   gap: 14px;
-  padding-top: 18px;
+  padding-top: 12px;
 }
 
 .project-btn {
   flex: 1 1 0;
   box-sizing: border-box;
   text-align: center;
-  padding: 10px 12px;
-  font-size: 1.2rem;
+  padding: 7px 12px;
+  font-size: 1.1rem;
   color: var(--black);
   text-decoration: none;
   background: #fff;
