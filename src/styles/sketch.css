@@ -508,16 +508,24 @@ button:hover {
 
 /* Horizontal scrolling row: new projects are appended without taking extra vertical space */
 .projects-container {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(460px, 85%);
+  column-gap: 30px;
+  row-gap: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding: 20px 12px 30px;
 }
 
+/* Each card spans 5 rows via subgrid so title / description / points / tech / links
+   line up at the same height across all cards */
 .project-card {
-  flex: 0 0 min(460px, 85%);
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  row-gap: 0;
   scroll-snap-align: start;
   box-sizing: border-box;
   padding: 20px;
