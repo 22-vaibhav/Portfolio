@@ -21,7 +21,7 @@ export default function Projects() {
             className="project-card"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            transition={{ delay: Math.min(index, 2) * 0.2 }}
             whileHover={{ scale: 1.03, rotate: index % 2 === 0 ? 1 : -1 }}
           >
             <h3>{project.title}</h3>
