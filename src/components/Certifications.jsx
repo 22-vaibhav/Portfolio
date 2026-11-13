@@ -15,14 +15,16 @@ export default function Certifications() {
     <section id="certifications" className="certs-section">
 
       {/* TITLE */}
-      <motion.h2
-        className="certs-title"
-        initial={{ opacity: 0, y: 40 }}
+      <motion.div
+        className="certs-heading"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
       >
-        {certificationsTitle}
-      </motion.h2>
+        <h2 className="certs-title">{certificationsTitle}</h2>
+        <svg className="certs-squiggle" viewBox="0 0 160 14" aria-hidden="true">
+          <path d="M3 9 C 13 1, 23 1, 33 9 S 53 17, 63 9 S 83 1, 93 9 S 113 17, 123 9 S 143 1, 157 8" />
+        </svg>
+      </motion.div>
 
       {/* CATEGORIES */}
       <div className="certs-categories">
@@ -30,18 +32,24 @@ export default function Certifications() {
           const isExpanded = expanded[cat.category];
           const visible = isExpanded ? cat.certs : cat.certs.slice(0, SHOW_LIMIT);
           const hiddenCount = cat.certs.length - SHOW_LIMIT;
+          const isWide =
+            catIndex === certificationCategories.length - 1 &&
+            certificationCategories.length % 2 === 1;
 
           return (
             <motion.div
               key={cat.category}
-              className="cert-category"
+              className={`cert-category${isWide ? " cert-category-wide" : ""}`}
+              style={{ "--cat-bg": cat.color, "--cat-shade": cat.shade }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
             >
 
+              {isWide && <div className="cert-tape" aria-hidden="true" />}
+
               {/* CATEGORY LABEL */}
-              <h3 className="category-label">{cat.category}</h3>
+              <h3 className="cert-label">{cat.category}</h3>
 
               {/* CERT BADGES */}
               <div className="certs-container">
@@ -52,18 +60,21 @@ export default function Certifications() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cert-badge"
-                    style={{ background: cat.color }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    whileHover={{
-                      scale: 1.08,
-                      rotate: index % 2 === 0 ? 2 : -2,
-                    }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
                   >
-                    <span className="cert-name">{cert.name}</span>
-                    <span className="cert-meta">{cert.issuer} · {cert.year}</span>
+                    <div className="cert-stub">
+                      <svg viewBox="0 0 46 46" aria-hidden="true">
+                        <path d="M23 3 L27 18 L43 23 L27 28 L23 43 L19 28 L3 23 L19 18 Z" />
+                      </svg>
+                    </div>
+                    <div className="cert-info">
+                      <div className="cert-name">{cert.name}</div>
+                      <div className="cert-meta">{cert.issuer} · {cert.year}</div>
+                    </div>
                   </motion.a>
                 ))}
               </div>

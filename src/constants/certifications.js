@@ -21,6 +21,7 @@ export const certificationCategories = [
   {
     category: "Databases",
     color: "var(--purple-light)",
+    shade: "var(--purple)",
     certs: [
       { name: "Introduction to the MongoDB", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-2d47f529-b97c-4462-adb7-ce3d08939226" },
       { name: "PL/SQL Fast Track – Beginner to Advanced ", issuer: "Udemy", year: "2026", link: "https://ude.my/UC-1a30a39c-4f00-4958-a14e-e02fd1332e7c" },
@@ -28,8 +29,17 @@ export const certificationCategories = [
     ],
   },
   {
+    category: "Backend",
+    color: "var(--green-light)",
+    shade: "var(--green)",
+    certs: [
+      { name: "Spring Boot For Software Engineers", issuer: "Udemy", year: "2026", link: "#" },
+    ],
+  },
+  {
     category: "Cloud & Tools",
     color: "var(--orange-light)",
+    shade: "var(--orange)",
     certs: [
       // { name: "Docker Essentials", issuer: "IBM", year: "2024", link: "#" },
       { name: "Google Cloud Platform (GCP) Fundamentals for Beginners", issuer: "Udemy", year: "2026", link: "https://www.udemy.com/certificate/UC-0ede89b0-ccfb-420c-b010-fb0368674566/" },
@@ -40,6 +50,7 @@ export const certificationCategories = [
   {
     category: "AI",
     color: "var(--yellow)",
+    shade: "#ffd43b",
     certs: [
       // Claude:
       { name: "Claude Certified Developer - Foundations", issuer: "Anthropic", year: "2026", link: "https://www.credly.com/badges/db2d1daf-3859-493d-8d92-58876f346a32" },

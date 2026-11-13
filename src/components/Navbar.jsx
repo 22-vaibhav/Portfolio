@@ -2,6 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { navBrand, navItems } from "../constants";
 
+function ActiveScribble() {
+  return (
+    <svg className="nav-scribble" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M10 22 C 6 8, 30 3, 55 4 C 82 5, 98 14, 92 26 C 86 37, 50 38, 24 35 C 8 33, 3 24, 8 14" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +69,12 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="logo">{navBrand}</h2>
+        <div className="logo-wrap">
+          <h2 className="logo">{navBrand}</h2>
+          <svg className="logo-underline" viewBox="0 0 160 8" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M2 5 C 20 1, 40 7, 62 4 S 108 2, 130 5 S 150 4, 158 3" />
+          </svg>
+        </div>
 
         {/* Desktop Links */}
         <div className="nav-links desktop-links">
@@ -69,11 +82,11 @@ export default function Navbar() {
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className={activeSection === item.toLowerCase() ? "nav-active" : ""}
-              whileHover={{ y: -2, rotate: -1 }}
+              whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              {item}
+              {activeSection === item.toLowerCase() && <ActiveScribble />}
+              <span>{item}</span>
             </motion.a>
           ))}
         </div>
@@ -134,13 +147,14 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.07, duration: 0.25 }}
-                  whileHover={{ x: 6, color: "var(--blue)" }}
+                  whileHover={{ x: 6 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className={`mobile-nav-number ${activeSection === item.toLowerCase() ? "mobile-nav-active" : ""}`}>
-                    0{i + 1}.
+                  <span className="mobile-nav-number">0{i + 1}.</span>
+                  <span className="mobile-nav-label">
+                    {activeSection === item.toLowerCase() && <ActiveScribble />}
+                    <span>{item}</span>
                   </span>
-                  {item}
                 </motion.a>
               ))}
             </motion.div>

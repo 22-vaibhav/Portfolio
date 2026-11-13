@@ -6,14 +6,16 @@ export default function Skills() {
     <section id="skills" className="skills-section">
 
       {/* TITLE */}
-      <motion.h2
-        className="skills-title"
-        initial={{ opacity: 0, y: 40 }}
+      <motion.div
+        className="skills-heading"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
       >
-        {skillsTitle}
-      </motion.h2>
+        <h2 className="skills-title">{skillsTitle}</h2>
+        <svg className="skills-squiggle" viewBox="0 0 160 14" aria-hidden="true">
+          <path d="M3 9 C 13 1, 23 1, 33 9 S 53 17, 63 9 S 83 1, 93 9 S 113 17, 123 9 S 143 1, 157 8" />
+        </svg>
+      </motion.div>
 
       {/* CATEGORIES */}
       <div className="skills-categories">
@@ -21,10 +23,12 @@ export default function Skills() {
           <motion.div
             key={cat.category}
             className="skill-category"
+            style={{ "--cat-bg": cat.color, "--cat-shade": cat.shade }}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: catIndex * 0.1 }}
           >
+            <div className="skill-tape" aria-hidden="true" />
 
             {/* CATEGORY LABEL */}
             <h3 className="category-label">{cat.category}</h3>
@@ -38,25 +42,19 @@ export default function Skills() {
                 visible: { transition: { staggerChildren: 0.05 } },
               }}
             >
-              {cat.skills.map((skill, index) => (
+              {cat.skills.map((skill) => (
                 <motion.div
                   key={skill.name}
                   className="skill-card"
-                  style={{ background: cat.color }}
                   variants={{
                     hidden: { opacity: 0, y: 30 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  whileHover={{
-                    scale: 1.12,
-                    rotate: index % 2 === 0 ? 2 : -2,
-                  }}
-                  whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 200 }}
                 >
                   {skill.icon ? (
                     <div className="icon-wrapper">
-                      <img src={skill.icon} alt={skill.name} />
+                      <img src={skill.icon} alt="" />
                     </div>
                   ) : (
                     <div className="icon-wrapper icon-text-only">

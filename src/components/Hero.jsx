@@ -55,19 +55,17 @@ export default function Hero() {
           transition={{ delay: 0.7 }}
         >
           {heroData.buttons.map((btn) => (
-            <a
+            <motion.a
               key={btn.label}
+              className="hero-btn"
               href={btn.url}
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <motion.button
-                whileHover={{ scale: 1.05, rotate: btn.rotate }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {btn.label}
-              </motion.button>
-            </a>
+              {btn.label}
+            </motion.a>
           ))}
         </motion.div>
       </div>

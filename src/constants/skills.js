@@ -23,6 +23,7 @@ export const skillCategories = [
   {
     category: "Backend",
     color: "var(--blue-light)",
+    shade: "#74c0fc",
     skills: [
       { name: "Java", icon: javaIcon },
       { name: "Spring Boot", icon: springbootIcon },
@@ -33,6 +34,7 @@ export const skillCategories = [
   {
     category: "Frontend",
     color: "var(--green-light)",
+    shade: "#69db7c",
     skills: [
       { name: "JavaScript", icon: javascriptIcon },
       { name: "TypeScript", icon: typescriptIcon },
@@ -42,6 +44,7 @@ export const skillCategories = [
   {
     category: "Databases",
     color: "var(--purple-light)",
+    shade: "var(--purple)",
     skills: [
       { name: "MySQL", icon: mysqlIcon },
       { name: "MongoDB", icon: mongoIcon },
@@ -50,6 +53,7 @@ export const skillCategories = [
   {
     category: "Cloud & Tools",
     color: "var(--orange-light)",
+    shade: "var(--orange)",
     skills: [
       { name: "Git", icon: gitIcon },
       { name: "GitHub", icon: githubIcon },
