@@ -22,8 +22,8 @@
 /* ============================= */
 body {
   font-family: 'Patrick Hand', cursive;
-  /* background: url('/src/assets/paper.jpg'); */
-  background: #FAF9F6;
+  background: url('/src/assets/paper.jpg');
+  /* background: #FAF9F6; */
   background-size: cover;
   color: #222;
 }
@@ -251,6 +251,9 @@ button:hover {
 
 .about-side {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  contain: size;
   padding: 28px;
   text-align: left;
   font-size: 1.05rem;
@@ -265,7 +268,8 @@ button:hover {
 
 /* SCROLLABLE EXPERIENCE AREA */
 .experience-scroll {
-  max-height: 380px;
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding-right: 6px;
   display: flex;
@@ -843,6 +847,10 @@ button:disabled {
   .about-side {
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .about-side {
+    contain: none;
   }
 
   /* SKILLS */
