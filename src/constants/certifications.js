@@ -44,6 +44,7 @@ export const certificationCategories = [
       // { name: "Docker Essentials", issuer: "IBM", year: "2024", link: "#" },
       { name: "Google Cloud Platform (GCP) Fundamentals for Beginners", issuer: "Udemy", year: "2026", link: "https://www.udemy.com/certificate/UC-0ede89b0-ccfb-420c-b010-fb0368674566/" },
       { name: "The Git & Github Bootcamp", issuer: "Udemy", year: "2026", link: "#" },
+      { name: "Bash Scripting and Shell Programming (Linux Command Line)", issuer: "Udemy", year: "2026", link: "http://ude.my/UC-8b1b3e34-cacd-4f54-8026-31018bed24e9" },
       // { name: "Postman API Testing", issuer: "Postman", year: "2023", link: "#" },
     ],
   },
