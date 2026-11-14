@@ -6,11 +6,13 @@ import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ThemeToggle />
       <Hero />
       <About />
       <Skills />

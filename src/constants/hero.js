@@ -16,7 +16,7 @@ export const heroData = {
     },
     {
       label: "Resume",
-      url: "https://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view?usp=sharinghttps://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view",
+      url: "https://drive.google.com/file/d/14itGp6CbukSl9AHGNsYSqbhJNXHJ-MoZ/view?usp=sharing",
       rotate: -1,
     },
   ],
